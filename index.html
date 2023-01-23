@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>OOP</h1>
+      <h2>form input che inserisce dati user in una tabella</h2>
+      <button id="inserisci">Inserisci Nuova Persona</button>
+      <section id="modal" class="hide">
+        <form action="">
+          <div>
+            <label for="nome">Inserisci il tuo Nome:</label>
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              placeholder="Il Tuo Nome"
+              required
+            />
+          </div>
+          <div>
+            <label for="cognome">Inserisci il tuo Cognome:</label>
+            <input
+              type="text"
+              name="cognome"
+              id="cognome"
+              placeholder="Il Tuo Cognome"
+              required
+            />
+          </div>
+          <div>
+            <label for="data">Inserisci la tua Data di Nascita:</label>
+            <input type="date" name="data" id="data" />
+          </div>
+          <div>
+            <button id="aggiungi" type="button">Aggiungi</button>
+          </div>
+        </form>
+      </section>
+      <aside>
+        <table>
+          <caption>
+            <h2>Lista persone</h2>
+          </caption>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Cognome</th>
+              <th>Data di Nascita</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </aside>
+    </main>
+    <script src="./javascrips/script.js"></script>
+  </body>
+</html>
