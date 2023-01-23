@@ -31,7 +31,7 @@ persona2.nReggistrazione = 2;
 persona3.nReggistrazione = 3;
 
 const arrayPersone = [persona1, persona2, persona3];
-let NumeroReggistrazione = arrayPersone.length;
+
 arrayPersone.forEach((pers) => {
   const riga = document.createElement("tr");
   const colNumero = document.createElement("td");
@@ -65,8 +65,7 @@ const aggiungiPersona = function () {
     dataInput.value
   );
 
-  personaN.nReggistrazione = NumeroReggistrazione + 1;
-  NumeroReggistrazione++;
+  personaN.nReggistrazione = arrayPersone.length + 1;
 
   arrayPersone.push(personaN);
 

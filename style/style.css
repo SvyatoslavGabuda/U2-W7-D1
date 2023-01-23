@@ -80,6 +80,7 @@ aside {
   align-items: center;
 }
 aside table {
+  border-spacing: 0;
   margin-top: 50px;
   width: 100%;
   border: 5px solid black;
