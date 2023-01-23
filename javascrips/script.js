@@ -5,9 +5,13 @@ const addBtn = document.getElementById("aggiungi");
 const tbody = document.querySelector("tbody");
 const inserisciBtn = document.getElementById("inserisci");
 const modale = document.getElementById("modal");
+const closebtn = document.getElementById("close");
 
 inserisciBtn.onclick = () => {
   modale.classList.remove("hide");
+};
+closebtn.onclick = () => {
+  modale.classList.add("hide");
 };
 
 const Persona = function (name, surname, date) {
@@ -60,6 +64,7 @@ const aggiungiPersona = function () {
     cognomeInput.value,
     dataInput.value
   );
+
   personaN.nReggistrazione = NumeroReggistrazione + 1;
   NumeroReggistrazione++;
 
