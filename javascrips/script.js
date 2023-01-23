@@ -51,6 +51,14 @@ arrayPersone.forEach((pers) => {
 });
 
 console.log(arrayPersone);
+dataInput.onchange = () => {
+  if (nameInput.checkValidity() && cognomeInput.checkValidity()) {
+    addBtn.removeAttribute("disabled");
+  } else {
+    alert("Il campo nome e cognome sono obbligatori");
+    dataInput.value = null;
+  }
+};
 
 const aggiungiPersona = function () {
   const riga = document.createElement("tr");
@@ -80,6 +88,10 @@ const aggiungiPersona = function () {
   riga.appendChild(colData);
   tbody.appendChild(riga);
   modale.classList.add("hide");
+  nameInput.value = null;
+  cognomeInput.value = null;
+  dataInput.value = null;
+  addBtn.setAttribute("disabled", true);
   console.log(arrayPersone);
 };
 addBtn.addEventListener("click", aggiungiPersona);
